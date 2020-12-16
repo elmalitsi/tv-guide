@@ -1,0 +1,153 @@
+@import "./scss/base";
+@import "./scss/colors";
+.header,.footer{
+  @extend %flex
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background-color: $darkgray;
+  left: 0;
+  right: 0;
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  background-color: black;
+  left: 0;
+  right: 0;   
+}
+
+.program-container{
+  overflow-x: scroll;
+  position: relative;
+  background-color: $darkgray;
+  max-height: calc(100vh - 140px);
+  margin-bottom: $headerHeight;
+  height: 100%;
+}
+
+
+.channel-row{
+  position: relative;
+  height: $sidebarWidth;
+  border-bottom: solid 1px #ffffff5c;
+}
+
+.img-wrapper{
+  height: $sidebarWidth;
+  left: 0;
+  width: 50px;
+  background-color: $darkgray;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow: 7px 1px 5px -2px rgba(0,0,0,0.93); 
+  box-shadow: 7px 1px 5px -2px rgba(0,0,0,0.93);
+}
+
+.img-wrapper img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.schedule{
+  display: flex;
+  margin-left: 50px;
+}
+
+.program{
+  background-color: black;
+  color: white;
+  height: $sidebarWidth;
+  border-left: 1px solid #ffffff26;
+}
+
+.program.live{
+  background-color: $lightgray;
+}
+
+.line{
+  border-left: 2px solid $yellow;
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+}
+
+.title{
+  font-size: 15px;
+  text-align: left;
+}
+
+.time{
+  font-size: 13px;
+  opacity: .8;
+  text-align: left;
+}
+
+.horizontal-menu{
+  z-index: 10;
+  margin-top: -60px;
+}
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper.active {
+  opacity: 1;
+}
+ 
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.menu-item-wrapper {
+  width: 27vw;
+  text-align: center;
+  opacity: .5;
+}
+
+.error{
+  @extend %center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu-wrapper{
+  padding: 10px 0;
+  display: block;
+}
+
+.top-bar-wrapper{
+  margin-top: 40px;
+  color: white;
+  background-color: #3a3a3a;
+}
+
+.button-now{
+  position: fixed;
+  right: 40px;
+  bottom: 65px;
+  z-index: 999999;
+  color: white;
+  background-color: #fbc500;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
