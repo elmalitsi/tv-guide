@@ -7,11 +7,11 @@ function Schedule(props) {
 
     let schedule =
     props.schedule.map((schedule,index) => {
-        var startTime = moment(schedule.start);
-        var endTime = moment(schedule.end);
-        var diff = endTime.diff(startTime, 'minutes');
-        var programWidth = 5*diff - 1
-        var hasfinished = endTime.isBefore(new Date(), "minutes");
+        let startTime = moment(schedule.start);
+        let endTime = moment(schedule.end);
+        let diff = endTime.diff(startTime, 'minutes');
+        let programWidth = 5*diff - 1
+        let hasfinished = endTime.isBefore(new Date(), "minutes");
         if(!hasfinished && liveProgramIndex===-1) {
             liveProgramIndex = index
         }

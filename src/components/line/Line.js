@@ -20,8 +20,7 @@ function Line(props) {
         setlinePosition(difference)
         props.scrollToLive(difference)
     }, [difference]);
-    // let programContainer = document.getElementById('program-container');
-    // programContainer.scroll(linePosition, 0);
+    
     return (
         <div style={{left: linePosition +"px"}} className="line" id="line">
             
