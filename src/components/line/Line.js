@@ -12,13 +12,11 @@ function Line(props) {
 
     setInterval(() => {
             difference = 5 * (moment().diff(startoftheday, 'minutes')) + 60
-            console.log(difference)
             setlinePosition(difference)
             props.scrollToLive(difference)
         }, 60000);
 
     useEffect(() => {
-        console.log(difference)
         setlinePosition(difference)
         props.scrollToLive(difference)
     }, [difference]);

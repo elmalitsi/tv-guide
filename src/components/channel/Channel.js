@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import Schedule from "./../schedule/Schedule";
 import Line from '../line/Line';
-import Button from '../button/button';
+import Button from '../button/Button';
 
 function Channel(props) {
 
@@ -23,7 +23,6 @@ function Channel(props) {
     
     let program =
         props.channels.map((channel) => {
-            console.log(channel)
             return(
                 <div key={channel.id} className="channel-row">
                     <div className="img-wrapper">

@@ -44,7 +44,7 @@ function Day() {
                 month: moment().add(3, 'day').format('D/M')
             }
         ]
-        setSelectedDay(5)
+        setSelectedDay(4)
         setDays(daysArray)
     }, [])
     

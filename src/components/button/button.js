@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment';
 
-function button(props) {
+function Button(props) {
 
 
     const goToLiveShows = () =>{
@@ -10,7 +10,6 @@ function button(props) {
         let startoftheday = moment().startOf('day');
         let difference = 5 * (moment().diff(startoftheday, 'minutes')) + 60;
         props.scrollToLive(difference)
-        console.log(difference)
     }
 
 
@@ -22,5 +21,5 @@ function button(props) {
 }
 
 
-export default button
+export default Button
 

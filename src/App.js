@@ -30,7 +30,6 @@ function App() {
         setIsLoading(false)
         //TODO handle error message
         setFailed(true)
-        console.log('error', error)
       }
     )
   }, [])
